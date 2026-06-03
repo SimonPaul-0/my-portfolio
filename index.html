@@ -231,7 +231,21 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
   #contact{grid-template-columns:1fr;padding:4rem 1.5rem;}
   h1.hero-h{font-size:2.5rem;}
   #hero{padding:0 1.5rem;}
-}
+}/* BROWSER CHROME THUMBNAILS */
+.pcard-browser{width:100%;height:100%;display:flex;flex-direction:column;}
+.pcard-browser-bar{display:flex;align-items:center;gap:5px;background:#101828;padding:7px 10px;flex-shrink:0;}
+.bb-dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0;}
+.bb-url{flex:1;background:rgba(255,255,255,0.06);border-radius:4px;padding:3px 8px;font-family:var(--mono);font-size:.6rem;color:rgba(255,255,255,0.35);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.pcard-preview{flex:1;padding:10px 12px;display:flex;flex-direction:column;gap:6px;}
+.prev-line{border-radius:3px;height:6px;background:rgba(255,255,255,0.06);}
+
+/* NUMBERED NAV */
+.nav-num{font-family:var(--mono);font-size:.58rem;color:rgba(0,245,212,0.4);margin-left:.4rem;vertical-align:middle;}
+
+/* ABOUT STATUS */
+.about-status{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted2);margin-bottom:1.2rem;}
+.status-live-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;flex-shrink:0;box-shadow:0 0 6px rgba(34,197,94,0.5);animation:livePulse 2.5s infinite;}
+@keyframes livePulse{0%,100%{opacity:1;}50%{opacity:.35;}}
 </style>
 </head>
 <body>
@@ -243,10 +257,10 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
 <nav id="navbar">
   <div class="nav-logo"><span>//</span> Simon Paul</div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#hackathons">Hackathons</a></li>
-    <li><a href="#skills">Skills</a></li>
+<li><a href="#about">About <span class="nav-num">01</span></a></li>
+<li><a href="#work">Work <span class="nav-num">02</span></a></li>
+<li><a href="#hackathons">Hackathons <span class="nav-num">03</span></a></li>
+<li><a href="#skills">Skills <span class="nav-num">04</span></a></li>
   </ul>
   <div class="nav-actions">
     <a class="nav-resume" href="https://docs.google.com/document/d/1bd4auqypV4f3xe5Xa0Us6vmFxnptTXDi/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
@@ -305,6 +319,7 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
         <div class="about-avatar">👨‍💻</div>
         <div class="about-name">Simon Paul R</div>
         <div class="about-role">// CS Student · SRM IST · Developer</div>
+        <div class="about-status"><span class="status-live-dot"></span> Active on GitHub &amp; LinkedIn</div>
         <div class="about-info-list">
           <div class="about-info-item">
             <div class="info-icon">📧</div>
@@ -340,7 +355,7 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
   <p class="section-sub reveal d2">Projects that showcase my ability to build scalable, performant and beautiful digital products.</p>
   <div class="projects-grid">
     <div class="pcard reveal" data-tilt>
-      <div class="pcard-top pm1"><div class="pcard-mock">🌐</div><div class="pcard-hover-overlay"></div></div>
+      <div class="pcard-top pm1"><div class="pcard-browser"><div class="pcard-browser-bar"><span class="bb-dot" style="background:#ff5f57"></span><span class="bb-dot" style="background:#febc2e"></span><span class="bb-dot" style="background:#28c840"></span><div class="bb-url">simonpaul-portfolio.vercel.app</div></div><div class="pcard-preview pm1"><div class="prev-line" style="background:rgba(0,245,212,0.25);width:55%"></div><div class="prev-line" style="width:85%"></div><div class="prev-line" style="width:70%"></div><div class="prev-line" style="width:45%"></div></div></div><div class="pcard-hover-overlay"></div></div>
       <div class="pcard-body">
         <div class="pcard-tags"><span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span><span class="ptag">Three.js</span></div>
         <div class="pcard-title">3D Portfolio</div>
@@ -355,7 +370,7 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
       </div>
     </div>
     <div class="pcard reveal d1" data-tilt>
-      <div class="pcard-top pm2"><div class="pcard-mock">🌍</div><div class="pcard-hover-overlay"></div></div>
+      <div class="pcard-top pm2"><div class="pcard-browser"><div class="pcard-browser-bar"><span class="bb-dot" style="background:#ff5f57"></span><span class="bb-dot" style="background:#febc2e"></span><span class="bb-dot" style="background:#28c840"></span><div class="bb-url">climate-ai-theta.vercel.app</div></div><div class="pcard-preview pm2"><div class="prev-line" style="background:rgba(61,178,67,0.28);width:60%"></div><div class="prev-line" style="width:90%"></div><div class="prev-line" style="width:65%"></div><div class="prev-line" style="width:50%"></div></div></div><div class="pcard-hover-overlay"></div></div>
       <div class="pcard-body">
         <div class="pcard-tags"><span class="ptag">Three.js</span><span class="ptag">JavaScript</span><span class="ptag">Claude API</span><span class="ptag">Vercel</span></div>
         <div class="pcard-title">ClimateAI</div>
@@ -370,7 +385,7 @@ footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify
       </div>
     </div>
     <div class="pcard reveal d2" data-tilt>
-      <div class="pcard-top pm3"><div class="pcard-mock">🧬</div><div class="pcard-hover-overlay"></div></div>
+      <div class="pcard-top pm3"><div class="pcard-browser"><div class="pcard-browser-bar"><span class="bb-dot" style="background:#ff5f57"></span><span class="bb-dot" style="background:#febc2e"></span><span class="bb-dot" style="background:#28c840"></span><div class="bb-url">credit-dna.vercel.app</div></div><div class="pcard-preview pm3"><div class="prev-line" style="background:rgba(255,107,107,0.28);width:45%"></div><div class="prev-line" style="width:80%"></div><div class="prev-line" style="width:60%"></div><div class="prev-line" style="width:50%"></div></div></div><div class="pcard-hover-overlay"></div></div>
       <div class="pcard-body">
         <div class="pcard-tags"><span class="ptag">Tailwind</span><span class="ptag">Three.js</span><span class="ptag">Tesseract.js</span><span class="ptag">Vercel</span></div>
         <div class="pcard-title">CreditDNA</div>
